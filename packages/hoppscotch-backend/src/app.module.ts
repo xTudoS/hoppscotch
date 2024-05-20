@@ -27,9 +27,11 @@ import { MailerModule } from './mailer/mailer.module';
 import { PosthogModule } from './posthog/posthog.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import { HealthModule } from './health/health.module';
+import { EventEmitterModule } from '@nestjs/event-emitter';
 
 @Module({
   imports: [
+    EventEmitterModule.forRoot(),
     ConfigModule.forRoot({
       isGlobal: true,
       load: [async () => loadInfraConfiguration()],
