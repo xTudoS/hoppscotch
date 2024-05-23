@@ -61,7 +61,7 @@
             <div
               v-for="(member, index) in membersList"
               :key="`member-${index}`"
-              class="flex divide-x divide-dividerLight"
+              class="flex"
             >
               <input
                 class="flex flex-1 bg-transparent px-4 py-2"
